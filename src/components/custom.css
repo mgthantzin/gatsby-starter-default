@@ -49,6 +49,13 @@ section.postlist ul li div.title a {
     box-sizing: border-box;
 }
 
+h1.post-title {
+    line-height: 1.4em;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: Inter,Noto Sans Myanmar,sans-serif;   
+}
+
 blockquote.twitter-tweet {
     max-width: 99%;
     margin: auto;
