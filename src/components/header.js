@@ -9,7 +9,7 @@ const Header = ({ avatar }) => (
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 500,
+        maxWidth: 150,
         padding: `1.45rem`,
         textAlign: `center`
       }}
