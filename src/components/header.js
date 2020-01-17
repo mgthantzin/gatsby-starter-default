@@ -24,7 +24,7 @@ const Header = ({ avatar }) => (
           </div>
         ) : (
           <div>
-            <Link to="/">
+            <Link to="/" className="b0">
             <img src={avatar} className="logo-avatar" alt="avatar" />
             </Link> 
           </div>
