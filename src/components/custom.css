@@ -1,0 +1,70 @@
+.logo-avatar {
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    border-radius: 50%;
+    width: 130px;
+}
+
+.aligncenter {
+    margin: 0 auto;
+    display: block;
+}
+  
+section.postlist {
+    max-width: 500px;
+    margin: 0 auto 50px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.code, .footnotes, code, pre {
+    font-family: Consolas, monaco, monospace;
+}
+
+section.postlist ul {
+    margin-left: 0;
+}
+
+section.postlist ul li {
+    margin: 9px 0;
+    line-height: 1.5em;
+    display: flex;
+}
+
+section.postlist ul li div.post-date {
+    width: 27%;
+    flex: 1 1;
+}
+
+section.postlist ul li div.title {
+    flex: 4 1;
+    margin-left: 10px;
+}
+
+section.postlist ul li div.title a {
+    text-decoration: none;
+    border: 0;
+    color: #428bca;
+    box-sizing: border-box;
+}
+
+blockquote.twitter-tweet {
+    max-width: 99%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    visibility: visible;
+    border: solid 1px #CCC;
+}
+
+footer{
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    border: 0;
+    color: #428bca;
+    box-sizing: border-box;
+}

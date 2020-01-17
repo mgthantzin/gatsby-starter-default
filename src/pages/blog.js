@@ -5,30 +5,45 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => (
+import { groupBy, getDateYear } from "../utils"
+import he from "he"
+
+const IndexPage = ({ data }) => {
+
+  const posts = data.allWordpressPost.edges.filter(
+    p => p.node.date !== null
+  )
+
+  const postsList = posts =>
+    posts.map(post => (
+      <li key={post.node.wordpress_id}>
+        <div className="post-date code">
+          <small>{post.node.date.substring(0, 6)}</small>
+        </div>
+        <div className="title">
+          <Link to={decodeURI(`/posts/${post.node.slug}`)}>{he.decode(post.node.title)}</Link>
+        </div>
+      </li>
+    ))
+
+  const postsListContainer = groupBy(posts, getDateYear)
+    .map(({ year, posts }, i) => (
+      <div key={i}>
+        <h4 className="code">{year}</h4>
+        {postsList(posts)}
+      </div>
+    ))
+    .reverse()
+
+return ( 
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <ul style={{ listStyle: "none" }}>
-      {data.allWordpressPost.edges.map(post => (
-        <li style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}>
-          <Link
-            to={decodeURI(`/posts/${post.node.slug}`)}
-            style={{ display: "flex", color: "black", textDecoration: "none" }}
-          >
-            
-            <div style={{ width: "75%" }}>
-              <h3
-                dangerouslySetInnerHTML={{ __html: post.node.title }}
-                style={{ marginBottom: 0 }}
-              />
-              {post.node.date}
-            </div>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <SEO title="Home" />
+    <section className="postlist">
+      <ul>{postsListContainer}</ul>
+    </section>
   </Layout>
 )
+      }
 
 export default IndexPage
 
@@ -37,9 +52,10 @@ export const query = graphql`
     allWordpressPost {
       edges {
         node {
+            wordpress_id  
             title
             slug
-            date(formatString: "DD MMM YYYY")
+            date(formatString: "MMM DD YYYY")
           }
         }
       }

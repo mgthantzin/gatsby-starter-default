@@ -200,7 +200,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Inter, 'Noto Sans Myanmar', 'Myanmar Text', 'Myanmar Sangam MN', 'Pyidaungsu', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 0.9rem;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

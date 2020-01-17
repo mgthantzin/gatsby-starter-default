@@ -1,42 +1,46 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Location } from "@reach/router"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+const Header = ({ avatar }) => (
+  <header>
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 500,
+        padding: `1.45rem`,
+        textAlign: `center`
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+    <Location>
+      {({ location }) => {
+        return location.pathname == "/" ? (
+          <div>
+            <img src={avatar} className="logo-avatar" alt="avatar" />
+            {/* <Link to="/about/">
+              blog
+            </Link> */}
+          </div>
+        ) : (
+          <div>
+            <Link to="/">
+            <img src={avatar} className="logo-avatar" alt="avatar" />
+            </Link> 
+          </div>
+        )
+      }}
+    </Location>  
     </div>
   </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  avatar: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  avatar: ``,
 }
 
 export default Header

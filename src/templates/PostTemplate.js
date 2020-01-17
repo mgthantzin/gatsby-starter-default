@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 //import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import he from "he"
 
 const PostTemplate = ({ data }) => (
   <Layout>
@@ -10,7 +11,7 @@ const PostTemplate = ({ data }) => (
       title={data.wordpressPost.title}
       description={data.wordpressPost.excerpt}
     />
-    <h1>{data.wordpressPost.title}</h1>
+    <h1>{he.decode(data.wordpressPost.title)}</h1>
     <p>
       Written by {data.wordpressPost.author.name} on {data.wordpressPost.date}
     </p>

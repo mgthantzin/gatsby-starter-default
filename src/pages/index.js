@@ -8,13 +8,9 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/blog/">Blog</Link>
+    <h1>Hello, I'm Thant!</h1>
+    <p>I'm a software developer from Vancouver. I have 11 years of .Net development experience. I am originally from Myanmar. I moved to Singapore to study when I was 17. I worked in Singapore for 11 years before migrating to Canada.</p>
+    Check out my <Link to="/blog/">blog posts</Link>. I write mostly in Burmese.
   </Layout>
 )
 
