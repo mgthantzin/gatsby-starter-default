@@ -10,5 +10,5 @@
 @font-face {
     font-family: "Inter";
     src: url("../fonts/Inter-Italic.woff2");
-    font-style: italic, oblique;
+    font-style: italic;
 }
