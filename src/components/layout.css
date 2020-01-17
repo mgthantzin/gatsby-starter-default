@@ -40,11 +40,10 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid #555;
+  border: 0;
+  color: #428bca;
+  box-sizing: border-box;
 }
 a:active,
 a:hover {
