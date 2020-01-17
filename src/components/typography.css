@@ -1,14 +1,17 @@
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2");
+  src: local('sans-serif'), url("../fonts/Inter-Regular.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2");
+  src: local('sans-serif'), url("../fonts/Inter-Bold.woff2");
   font-weight: bold;
+  font-display: swap;
 }
 @font-face {
-    font-family: "Inter";
-    src: url("../fonts/Inter-Italic.woff2");
-    font-style: italic;
+  font-family: "Inter";
+  src: local('sans-serif'), url("../fonts/Inter-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
 }
