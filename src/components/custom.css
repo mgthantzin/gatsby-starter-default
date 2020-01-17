@@ -56,6 +56,12 @@ h1.post-title {
     font-family: Inter,Noto Sans Myanmar,sans-serif;   
 }
 
+div.divider {
+    background: linear-gradient(90deg,hsla(0,0%,100%,0),#ccc,hsla(0,0%,100%,0));
+    height: 1px;
+    margin: 2em 0;   
+}
+
 blockquote.twitter-tweet {
     max-width: 99%;
     margin: auto;
