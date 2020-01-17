@@ -23,6 +23,10 @@ section.postlist {
     margin-top: 50px;
 }
 
+.mb-50 {
+    margin-bottom: 50px;    
+}
+
 .code, .footnotes, code, pre {
     font-family: Consolas, monaco, monospace;
 }
