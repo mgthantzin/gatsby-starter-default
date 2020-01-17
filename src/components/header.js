@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Location } from "@reach/router"
+import Image from "../components/avatar"
 
 const Header = ({ avatar }) => (
   <header>
@@ -17,15 +18,17 @@ const Header = ({ avatar }) => (
       {({ location }) => {
         return location.pathname == "/" ? (
           <div>
-            <img src={avatar} className="logo-avatar" alt="avatar" />
-            {/* <Link to="/about/">
+            {/*<img src={avatar} className="logo-avatar" alt="avatar" />
+             <Link to="/about/">
               blog
             </Link> */}
+            <Avatar />
           </div>
         ) : (
           <div>
             <Link to="/" className="b0">
-            <img src={avatar} className="logo-avatar" alt="avatar" />
+            {/*<img src={avatar} className="logo-avatar" alt="avatar" />*/}
+            <Avatar />
             </Link> 
           </div>
         )
