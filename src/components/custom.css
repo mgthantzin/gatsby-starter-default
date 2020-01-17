@@ -4,6 +4,10 @@
     width: 130px;
 }
 
+.b0{
+    border: 0px;   
+}
+
 .aligncenter {
     margin: 0 auto;
     display: block;
