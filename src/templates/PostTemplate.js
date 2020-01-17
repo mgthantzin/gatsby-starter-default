@@ -14,7 +14,8 @@ const PostTemplate = ({ data }) => (
     <h1 class="post-title">{he.decode(data.wordpressPost.title)}</h1>
     <span class="code aligncenter"><small>{data.wordpressPost.date}</small></span>
     <div class="divider"></div>  
-    <article      
+    <article 
+      style={{ marginTop: 20 }}
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
     />
   </Layout>
