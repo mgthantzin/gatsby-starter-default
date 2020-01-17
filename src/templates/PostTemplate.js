@@ -12,9 +12,8 @@ const PostTemplate = ({ data }) => (
       description={data.wordpressPost.excerpt}
     />
     <h1 class="post-title">{he.decode(data.wordpressPost.title)}</h1>
-    <p>
-      Written by {data.wordpressPost.author.name} on {data.wordpressPost.date}
-    </p>
+    <span class="code"><small>{data.wordpressPost.date}</small></span>
+    <div class="divider"></div>  
     <div
       style={{ marginTop: 20 }}
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
