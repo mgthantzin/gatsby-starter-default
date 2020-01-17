@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Location } from "@reach/router"
-import Image from "../components/avatar"
+import Avatar from "../components/avatar"
 
 const Header = ({ avatar }) => (
   <header>
