@@ -26,7 +26,7 @@ const Avatar = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} className="logo-avatar" />
 }
 
 export default Avatar
