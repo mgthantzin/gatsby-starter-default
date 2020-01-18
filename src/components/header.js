@@ -4,7 +4,7 @@ import React from "react"
 import { Location } from "@reach/router"
 import Avatar from "../components/avatar"
 
-const Header = ({ avatar }) => (
+const Header = () => (
   <header>
     <div
       style={{
@@ -16,7 +16,7 @@ const Header = ({ avatar }) => (
     >
     <Location>
       {({ location }) => {
-        return location.pathname == "/" ? (
+        return location.pathname === "/" ? (
           <div>
             {/*<img src={avatar} className="logo-avatar" alt="avatar" />
              <Link to="/about/">

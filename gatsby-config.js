@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Thant Zin Oo`,
     description: `Thoughts and Notes`,
-    author: `@thantzinoo`,
-    avatar: `https://drive.google.com/uc?id=1uEpFcX6q1Q8ZVl_MyLDQ9UlGUomM0bCW`
+    author: `@mgthantzin`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

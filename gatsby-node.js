@@ -10,7 +10,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const PostTemplate = path.resolve("./src/templates/PostTemplate.js")
+  const postTemplate = path.resolve("./src/templates/postTemplate.js")
 
   const result = await graphql(`
     {
@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   BlogPosts.forEach(post => {
     createPage({
       path: decodeURI(`/posts/${post.node.slug}`),
-      component: PostTemplate,
+      component: postTemplate,
       context: {
         id: post.node.wordpress_id,
       },

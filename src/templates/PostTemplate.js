@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 //import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import he from "he"
 
-const PostTemplate = ({ data }) => (
+const postTemplate = ({ data }) => (
   <Layout>
     <SEO
       title={data.wordpressPost.title}
@@ -19,9 +20,14 @@ const PostTemplate = ({ data }) => (
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
     />
     <div class="divider"></div>
+    <h4 class="post-title">
+    <Link to="/blog" title="Back to Blog">
+      &larr;{" "}Back
+    </Link></h4>
+    <div class="divider"></div>
   </Layout>
 )
-export default PostTemplate
+export default postTemplate
 
 export const query = graphql`
   query($id: Int!) {
