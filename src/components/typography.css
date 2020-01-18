@@ -15,3 +15,12 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Noto Sans Myanmar";
+  src: local('Noto Sans Myanmar'), 
+       local('Pyidaungsu'),
+       local('Myanmar Text'), 
+       local('Myanmar Sangam MN'),
+       url("../fonts/NotoSansMyanmar-Regular.woff2");
+  font-display: swap;
+}
