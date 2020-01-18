@@ -62,7 +62,7 @@ section.postlist ul li div.title a {
 }
 
 h4.post-title {
-    font-family: Inter, 'Noto Sans Myanmar', Pyidaungsu, "Myanmar Text", "Myanmar Sangam MN", sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: Inter, 'Noto Sans Myanmar', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 1.4em;
     text-align: center;
     line-height: 1.4em;
