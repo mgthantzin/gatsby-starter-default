@@ -6,3 +6,4 @@
 - [ ] Migrate MD posts to WP
 - [x] Load `Noto Sans Myanmar` font
 - [ ] Fixed image dimension issue on mobile
+- [x] Back link to post list from post
