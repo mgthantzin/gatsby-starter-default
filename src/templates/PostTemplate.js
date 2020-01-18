@@ -18,6 +18,7 @@ const PostTemplate = ({ data }) => (
       style={{ marginTop: 20 }}
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
     />
+    <div class="divider"></div>
   </Layout>
 )
 export default PostTemplate
