@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
           <small>{post.node.date.substring(0, 6)}</small>
         </div>
         <div className="title">
-          <Link to={decodeURI(`/posts/${post.node.slug}`)}>{he.decode(post.node.title)}</Link>
+          <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link>
         </div>
       </li>
     ))

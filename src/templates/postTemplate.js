@@ -21,7 +21,7 @@ const postTemplate = ({ data }) => (
     />
     <div class="divider"></div>
     <h4 class="post-title">
-    <Link to="/blog" title="Back to Blog">
+    <Link to="/blog/" title="Back to Blog">
       &larr;{" "}Back
     </Link></h4>
     <div class="divider"></div>
