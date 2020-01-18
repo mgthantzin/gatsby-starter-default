@@ -11,7 +11,7 @@ const PostTemplate = ({ data }) => (
       title={data.wordpressPost.title}
       description={data.wordpressPost.excerpt}
     />
-    <h1 class="post-title">{he.decode(data.wordpressPost.title)}</h1>
+    <h4 class="post-title">{he.decode(data.wordpressPost.title)}</h4>
     <span class="code aligncenter"><small>{data.wordpressPost.date}</small></span>
     <div class="divider"></div>  
     <article 
