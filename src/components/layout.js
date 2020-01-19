@@ -27,6 +27,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+      <link rel="alternate" type="application/rss+xml" title="Thant Zin Oo's Blog Feed" href="https://thantzinoo.net/rss.xml" />
+      </Helmet>
       <Header />
       <div
         style={{
