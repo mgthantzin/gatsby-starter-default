@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Thant Zin Oo`,
     description: `Thoughts and Notes`,
-    author: `@mgthantzin`
+    author: `@mgthantzin`,
+    siteUrl: `https://thantzinoo.net`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,6 +39,61 @@ module.exports = {
         // does your site use the Advanced Custom Fields Plugin?
         useACF: false
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allWordpressPost } }) => {
+              return allWordpressPost.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.content,
+                  date: edge.node.date,
+                  url: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
+                  custom_elements: [{ "content:encoded": edge.node.content }],
+                })
+              })
+            },
+            query: `
+              {
+                allWordpressPost(sort: {order: DESC, fields: [date]}) {
+                  edges {
+                    node {
+                      date
+                      title
+                      content
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Thant Zin Oo's Blog Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/posts/",
+            // optional configuration to specify external rss feed, such as feedburner
+            //link: "https://feeds.feedburner.com/gatsby/blog",
+          },
+        ],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
