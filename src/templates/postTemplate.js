@@ -10,7 +10,7 @@ const postTemplate = ({ data }) => (
   <Layout>
     <SEO
       title={data.wordpressPost.title}
-      description={data.wordpressPost.excerpt}
+      description={data.wordpressPost.excerpt.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/<[^>]*>/g, '').substring(0,199)}
     />
     <h4 class="post-title">{he.decode(data.wordpressPost.title)}</h4>
     <span class="code aligncenter"><small>{data.wordpressPost.date}</small></span>
