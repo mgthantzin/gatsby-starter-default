@@ -10,8 +10,7 @@ exports.onRenderBody = ({ setPostBodyComponents }) => {
   setPostBodyComponents([
     	<script>
 		(function() {
-			window.counter = 'https://tzo.goatcounter.com/count'
-
+			window.counter = 'https://tzo.goatcounter.com/count';
 			var script = document.createElement('script');
 			script.async = 1;
 			script.src = '//gc.zgo.at/count.js';
