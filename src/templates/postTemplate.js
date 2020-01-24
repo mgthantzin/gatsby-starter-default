@@ -12,7 +12,7 @@ const postTemplate = ({ data }) => (
       title={data.wordpressPost.title}
       description={data.wordpressPost.excerpt.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/<[^>]*>/g, '').substring(0,199)}
     />
-    <h4 class="post-title">{he.decode(data.wordpressPost.title)}</h4>
+    <h4 class="heading">{he.decode(data.wordpressPost.title)}</h4>
     <span class="code aligncenter"><small>{data.wordpressPost.date}</small></span>
     <div class="divider"></div>  
     <article 
@@ -20,7 +20,7 @@ const postTemplate = ({ data }) => (
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
     />
     <div class="divider"></div>
-    <h4 class="post-title">
+    <h4 class="heading">
     <Link to="/blog/" title="Back to Blog">
       &larr;{" "}Back
     </Link></h4>

@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import { groupBy, getDateYear } from "../utils"
 import he from "he"
 
-const IndexPage = ({ data }) => {
+const BlogPage = ({ data }) => {
 
   const posts = data.allWordpressPost.edges.filter(
     p => p.node.date !== null
@@ -46,7 +46,7 @@ return (
 )
       }
 
-export default IndexPage
+export default BlogPage
 
 export const query = graphql`
   query {
