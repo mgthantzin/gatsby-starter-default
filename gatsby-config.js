@@ -6,14 +6,14 @@ module.exports = {
     siteUrl: `https://thantzinoo.net`
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-16451756-4",        
-        anonymize: true,        
-        respectDNT: true,
-      },
-    },
+    //{
+    //  resolve: `gatsby-plugin-google-analytics`,
+    //  options: {
+    //    trackingId: "UA-16451756-4",        
+    //    anonymize: true,        
+    //    respectDNT: true,
+    //  },
+    //},
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
