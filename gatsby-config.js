@@ -3,8 +3,7 @@ module.exports = {
     title: `Thant Zin Oo`,
     description: `Thoughts and Notes`,
     author: `@mgthantzin`,
-    siteUrl: `https://thantzinoo.net`,
-    wordPressUrl: `https://wp.thantzinoo.net`,
+    siteUrl: `https://thantzinoo.net`
   },
   plugins: [
     //{
