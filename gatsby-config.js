@@ -40,10 +40,10 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `wp.thantzinoo.net`,
-        protocol: `http`,
+        baseUrl: `tzo.tech.blog`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
+        hostingWPCOM: true,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: false,
         excludedRoutes: [
