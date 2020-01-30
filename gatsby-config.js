@@ -45,7 +45,21 @@ module.exports = {
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false
+        useACF: false,
+        excludedRoutes: [
+          "/*/*/comments", 
+          "/yoast/**", 
+          "/akismet/**", 
+          "/oembed/**", 
+          "**/categories",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/settings",
+          "**/themes",
+          "**/users/me"
+        ],
       }
     },
     {
