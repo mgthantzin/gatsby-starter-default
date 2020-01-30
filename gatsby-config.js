@@ -46,6 +46,12 @@ module.exports = {
         hostingWPCOM: true,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: false,
+        auth: {
+          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientId: "68015",
+          wpcom_user: process.env.WORDPRESS_EMAIL,
+          wpcom_pass: process.env.WORDPRESS_PASSWORD,
+        },
         excludedRoutes: [
           "/*/*/comments", 
           "/yoast/**", 
