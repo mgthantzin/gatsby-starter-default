@@ -65,7 +65,6 @@ module.exports = {
           "**/settings",
           "**/themes",
           "**/users/me",
-          "**/oauth2/**",
           "**/feedback",
           "**/users",
           "**/jetpack-global-styles"
