@@ -58,7 +58,10 @@ module.exports = {
           "**/taxonomies",
           "**/settings",
           "**/themes",
-          "**/users/me"
+          "**/users/me",
+          "/oauth2/token",
+          "**/feedback",
+          "**/users",
         ],
       }
     },
