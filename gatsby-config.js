@@ -40,12 +40,35 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `wp.thantzinoo.net`,
-        protocol: `http`,
+        baseUrl: `tzo.tech.blog`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
+        hostingWPCOM: true,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false
+        useACF: false,
+        auth: {
+          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientId: "68015",
+          wpcom_user: process.env.WORDPRESS_EMAIL,
+          wpcom_pass: process.env.WORDPRESS_PASSWORD,
+        },
+        excludedRoutes: [
+          "/*/*/comments", 
+          "/yoast/**", 
+          "/akismet/**", 
+          "/oembed/**", 
+          "**/categories",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/settings",
+          "**/themes",
+          "**/users/me",
+          "**/feedback",
+          "**/users",
+          "**/jetpack-global-styles"
+        ],
       }
     },
     {
