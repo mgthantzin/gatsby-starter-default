@@ -17,7 +17,7 @@ const IndexPage = () => (
         <li>moved to Singapore to study when I was 17</li>
         <li>worked in Singapore for 11 years before migrating to Canada</li>
       </ul>
-      <p>Check out my <Link to="/blog/">blog posts</Link>. I write mostly in Burmese. This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
+      <p>Check out my <Link to="/blog/">blog posts</Link>. I write mostly in Burmese. Sometimes, I also share articles that I find interesting. This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
     </div>
   </Layout>
 )
