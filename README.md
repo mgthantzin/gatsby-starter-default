@@ -7,4 +7,5 @@
 - [x] Load `Noto Sans Myanmar` font
 - [x] Fixed image dimension issue on mobile
 - [x] Back link to post list from pos
-- [ ] Improve caching
+- [x] Improve caching
+- [x] Moved source to WP.com
