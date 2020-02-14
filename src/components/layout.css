@@ -207,10 +207,10 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
+  -ms-font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
+  font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
 }
 img {
   max-width: 100%;
