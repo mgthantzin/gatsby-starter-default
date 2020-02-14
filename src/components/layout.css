@@ -446,8 +446,8 @@ blockquote {
   padding-top: 0;
   margin-bottom: 1.45rem;
   /* custom */
-  background: #EFEFEF;
-  border-left: 10px solid #ccc;
+  background: #fbf2d4; /*#EFEFEF*/
+  border-left: 10px solid #ffeb8e; /*#ccc*/
   margin: 1.5em 0;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
