@@ -18,7 +18,7 @@ const BlogPage = ({ data }) => {
     posts.map(post => (
       <li key={post.node.wordpress_id}>
         <div className="post-date code">
-          {post.node.date.substring(0, 6)}
+          <small>{post.node.date.substring(0, 6)}</small>
         </div>
         <div className="title">
           <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link>
