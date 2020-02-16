@@ -16,22 +16,22 @@ const Header = () => (
     >
     <Location>
       {({ location }) => {
-        return location.pathname === "/" ? (
-          <div>
-            {/*<img src={avatar} className="logo-avatar" alt="avatar" />
-             <Link to="/about/">
-              blog
-            </Link> */}
-            <Avatar />
-          </div>
-        ) : (
-          <div>
+
+        if (location.pathname === "/"){
+          return (<div>
+            <Avatar/>
+          </div>)
+        } else if(location.pathname.includes('/posts/')){
+          return (<Link to="/blog/" className="b0">
+            <Avatar alternateText="Back to Blog" />
+          </Link>) 
+        }else{
+          return (<div>
             <Link to="/" className="b0">
-            {/*<img src={avatar} className="logo-avatar" alt="avatar" />*/}
-            <Avatar />
+              <Avatar alternateText="Back to Home Page" />
             </Link> 
-          </div>
-        )
+          </div>)
+        }        
       }}
     </Location>  
     </div>
