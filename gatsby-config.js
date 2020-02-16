@@ -101,7 +101,7 @@ module.exports = {
             },
             query: `
               {
-                allWordpressPost(sort: {order: DESC, fields: [date]}) {
+                allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}) {
                   edges {
                     node {
                       date

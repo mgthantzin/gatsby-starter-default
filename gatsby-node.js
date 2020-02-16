@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     {
-      allWordpressPost {
+      allWordpressPost(filter: {status: {eq: "publish"}}) {
         edges {
           node {
             slug
