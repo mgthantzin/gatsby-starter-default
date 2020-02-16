@@ -26,7 +26,7 @@
 
 h1.hello {
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
+    font-feature-settings: "kern","liga","clig","dlig","calt","case","zero","cpsp","ss01","cv01","cv06";
 }
 
 section.postlist {
@@ -68,7 +68,7 @@ h4.heading {
     text-align: center;
     line-height: 1.4em;
     margin-bottom: 0.5rem;
-    font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "tnum", "case", "zero", "cpsp", "ss01", "cv01", "cv06", "cv11";
+    font-feature-settings: "kern","liga","clig","dlig","calt","case","zero","cpsp","ss01","cv01","cv06";
 }
 
 div.divider {
