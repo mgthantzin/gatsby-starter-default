@@ -58,7 +58,7 @@ section.postlist ul li div.title {
 section.postlist ul li div.title a {
     text-decoration: none;
     border: 0;
-    color: #428bca;
+    color: #005D8F;
     box-sizing: border-box;
 }
 
@@ -100,6 +100,6 @@ footer{
 footer a {
     text-decoration: none;
     border: 0;
-    color: #428bca;
+    color: #005D8F;
     box-sizing: border-box;
 }
