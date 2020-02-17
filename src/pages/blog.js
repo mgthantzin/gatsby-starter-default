@@ -30,7 +30,9 @@ const BlogPage = ({ data }) => {
     .map(({ year, posts }, i) => (
       <div key={i}>
         <h4 className="code">{year}</h4>
-        {postsList(posts)}
+        <ul>
+          {postsList(posts)}
+        </ul>
         <div class="divider"></div>
       </div>
     ))
@@ -40,7 +42,7 @@ return (
   <Layout>
     <SEO title="Blog" />
     <section className="postlist">
-      <ul>{postsListContainer}</ul>
+      {postsListContainer}
     </section>
   </Layout>
 )
