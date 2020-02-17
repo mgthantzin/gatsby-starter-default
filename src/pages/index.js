@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div style={{ marginBottom: 50 }}>
-      <h1>Hello, I'm <span style={{ color: '#428bca' }}>Thant</span>!</h1>
+      <h1>Hello, I'm <span style={{ color: '#0088CC' }}>Thant</span>!</h1>
       <ul>
         <li>a software developer from Vancouver</li>
         <li>11 years of .Net development experience</li>
