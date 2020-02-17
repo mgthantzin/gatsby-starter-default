@@ -90,6 +90,7 @@ blockquote.twitter-tweet {
     border-radius: 4px;
     visibility: visible;
     border: solid 1px #CCC;
+    background: #efefef;
 }
 
 footer{
