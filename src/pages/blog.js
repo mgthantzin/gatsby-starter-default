@@ -17,10 +17,8 @@ const BlogPage = ({ data }) => {
   const postsList = posts =>
     posts.map(post => (
       <li key={post.node.wordpress_id}>
-        <div className="post-date code">
-          <small>{post.node.date.substring(0, 6)}</small>
-        </div>
-        <div className="title">
+        <div>{post.node.date.substring(0, 6)}</div>
+        <div>
           <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link>
         </div>
       </li>
@@ -29,7 +27,7 @@ const BlogPage = ({ data }) => {
   const postsListContainer = groupBy(posts, getDateYear)
     .map(({ year, posts }, i) => (
       <div key={i}>
-        <h4 className="code">{year}</h4>
+        <h4>{year}</h4>
         <ul>
           {postsList(posts)}
         </ul>
