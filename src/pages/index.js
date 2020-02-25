@@ -45,13 +45,12 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query {
+ {
     allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}, limit: 5) {
           edges {
               node {
                   date
                   title
-
                   slug
               }
           }
