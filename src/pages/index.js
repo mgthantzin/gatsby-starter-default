@@ -32,7 +32,7 @@ const postsList = posts =>
       <p>Check out my <Link to="/blog/">blog posts</Link>. I write mostly in Burmese. Sometimes, I also share articles that I find interesting. This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
       <p>
          Recently, I wrote<br />
-         {postsList(posts)}
+         <ul>{postsList(posts)}</ul>
       </p>
     </div>
   </Layout>)
