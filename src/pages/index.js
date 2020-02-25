@@ -33,6 +33,8 @@ const postsList = posts =>
       <p>Recently, I wrote/shared</p>
       <ul className="recentlist">{postsList(posts)}</ul>      
       <p>To read older posts, please visit the <Link to="/blog/">blog</Link>.</p>
+      <div class="divider"></div>  
+      <h4 style="margin: 50px 0 10px;">Note</h4>  
       <p>This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
     </div>
   </Layout>)
