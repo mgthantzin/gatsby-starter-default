@@ -32,7 +32,7 @@ const postsList = posts =>
       <p>I like to keep a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
       <p>Recently, I wrote/shared</p>
       <ul className="recentlist">{postsList(posts)}</ul>      
-      <p><Link to="/blog/">Read older posts</Link></p>
+      <p>To read older posts, please visit the <Link to="/blog/">blog</Link>.</p>
       <p>This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
     </div>
   </Layout>)
