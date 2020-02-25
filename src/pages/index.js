@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 const postsList = posts =>
   posts.map(post => (
     <li key={post.node.wordpress_id}>
-        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> on <span>{post.node.date}</span>      
+        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> <i>{post.node.date}</i>     
     </li>
   ))
 
@@ -30,10 +30,8 @@ const postsList = posts =>
         <li>worked in Singapore for 11 years before migrating to Canada</li>
       </ul>
       <p>Check out my <Link to="/blog/">blog posts</Link>. I write mostly in Burmese. Sometimes, I also share articles that I find interesting. This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
-      <p>
-         Recently, I wrote<br />
-         <ul>{postsList(posts)}</ul>
-      </p>
+      <p>Recently, I wrote</p>
+      <ul className="recentlist">{postsList(posts)}</ul>      
     </div>
   </Layout>)
 
