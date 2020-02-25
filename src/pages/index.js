@@ -11,17 +11,12 @@ const IndexPage = ({ data }) => {
       p => p.node.date !== null
   )
 
-  const postsList = posts =>
-    posts.map(post => (
-      <li key={post.node.wordpress_id}>
-        <div className="post-date code">
-          <small>{post.node.date}</small>
-        </div>
-        <div className="title">
-          <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link>
-        </div>
-      </li>
-    ))
+const postsList = posts =>
+  posts.map(post => (
+    <li key={post.node.wordpress_id}>
+        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> on <span>{post.node.date}</span>      
+    </li>
+  ))
 
   return(<Layout>
     <SEO title="Home" />
@@ -51,7 +46,7 @@ export const query = graphql`
     allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}, limit: 5) {
           edges {
               node {
-                  date
+                  date(formatString: "DD MMM")
                   title
                   slug
               }
