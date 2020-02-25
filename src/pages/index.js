@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }) => {
   const posts = data.allWordpressPost.edges.filter(
       p => p.node.date !== null
   )
@@ -40,13 +40,14 @@ const IndexPage = ({ data }) => (
       </p>
     </div>
   </Layout>)
-)
+
+}
 
 export default IndexPage
 
 export const query = graphql`
  {
-    allWordpressPost {
+    allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}, limit: 5) {
           edges {
               node {
                   date
