@@ -38,6 +38,10 @@ ul.recentlist i {
     color: #CCC;display: inline-block;margin-left: 13px;
 }
 
+#note{
+    margin: 50px 0 10px;
+}
+
 section.postlist {
     max-width: 500px;
     margin: 0 auto 50px;
