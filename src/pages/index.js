@@ -46,7 +46,7 @@ export default IndexPage
 
 export const query = graphql`
  {
-    allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}, limit: 5) {
+    allWordpressPost {
           edges {
               node {
                   date
