@@ -1,9 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
+
+import he from "he"
 
 const IndexPage = ({ data }) => {
   const posts = data.allWordpressPost.edges.filter(
