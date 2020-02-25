@@ -29,6 +29,15 @@
     font-feature-settings: "kern","liga","clig","dlig","calt","case","zero","cpsp","ss01","cv01","cv06";
 } */
 
+ul.recentlist {
+    list-style: none;
+    margin-left: 0;
+}
+
+ul.recentlist i {
+    color: #CCC;display: inline-block;margin-left: 13px;
+}
+
 section.postlist {
     max-width: 500px;
     margin: 0 auto 50px;
