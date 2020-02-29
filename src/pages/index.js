@@ -22,17 +22,11 @@ const postsList = posts =>
     <SEO title="Home" />
     <div style={{ marginBottom: 50 }}>
       <h1>Hello, I'm <span style={{ color: '#005D8F' }}>Thant</span>!</h1>
-      <ul>
-        <li>a software developer from Vancouver</li>
-        <li>11 years of .Net development experience</li>
-        <li>originally from Myanmar</li>
-        <li>moved to Singapore to study when I was 17</li>
-        <li>worked in Singapore for 11 years before migrating to Canada</li>
-      </ul>
-      <p>I like to keep a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
-      <p>Recently, I wrote/shared</p>
+      <p>I'm a software developer from Vancouver. I was born in Myanmar (Burma). I moved to Singapore in 2005 to join an IT diploma program at Singapore Polytechnic. In 2008, I started working as a .Net developer. At the same time, I pursued a bachelor's degree program (offshore) in Business Information Systems from Deakin University (Australia). In 2019, I migrated to Canada.</p>
+      <p>One of my hobbies is keeping a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
+      <h2>Recent Blog Posts</h2>
       <ul className="recentlist">{postsList(posts)}</ul>      
-      <p>To read older posts, please visit the <Link to="/blog/">blog</Link>.</p>
+      <Link to="/blog/" className="read-blog">Read my blog</Link>
       <div class="divider"></div>  
       <h4 id="note">Note</h4>  
       <p>This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>

@@ -121,3 +121,14 @@ footer a {
     color: #005D8F;
     box-sizing: border-box;
 }
+
+.read-blog {
+    color: #fff;
+    background-color: #005D8F;
+    display: block;
+    padding: 7px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 130px;
+    text-align: center;
+  }
