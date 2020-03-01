@@ -11,7 +11,7 @@ const PrivacyPage = () => (
       <h1>Privacy Policy</h1>
       <p>This website does not collect any personal information. GoatTracker is used for analytics. Its privacy policy can be found <a href='https://www.goatcounter.com/privacy' target='_blank' rel="noopener noreferrer">here</a>.</p>
       <h4 class="heading">
-        <Link to="/blog/" title="Back to Blog">
+        <Link to="/" title="Back">
             &larr;{" "}Back
         </Link>
       </h4>
