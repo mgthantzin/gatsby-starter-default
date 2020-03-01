@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import he from "he"
+import Helmet from "react-helmet"
 
 const IndexPage = ({ data }) => {
   const posts = data.allWordpressPost.edges.filter(
@@ -14,18 +15,27 @@ const IndexPage = ({ data }) => {
 const postsList = posts =>
   posts.map(post => (
     <li key={post.node.wordpress_id}>
-        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> <i>{post.node.date}</i>     
+        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> <i className="date">{post.node.date}</i>     
     </li>
   ))
 
-  return(<Layout>
+  return(
+  <Layout>
+    <Helmet>
+      <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    </Helmet>
     <SEO title="Home" />
     <div style={{ marginBottom: 50 }}>
       <h1>Hello, I'm <span style={{ color: '#005D8F' }}>Thant</span>!</h1>
-      <p>I'm a software developer from Vancouver. I was born in Myanmar (Burma). I moved to Singapore in 2005 to join an IT diploma program at Singapore Polytechnic. In 2008, I started working as a .Net developer. At the same time, I pursued a bachelor's degree program (offshore) in Business Information Systems from Deakin University (Australia). In 2019, I migrated to Canada.</p>
+      <ul className="indexlist">
+        <li><i class="em em-flag-ca" aria-label="Canada Flag"></i>.Net developer from Vancouver</li>
+        <li><i class="em em-flag-mm" aria-label="Burma Flag"></i>Originally from Burma</li>
+        <li><i class="em em-flag-sg" aria-label="Singapore Flag"></i>Studied and worked in Singapore from 2005 to 2019</li>
+        <li><i class="em em-computer" aria-label="Personal Computer"></i>Work with .Net primarily and a bit of all the rest</li>
+      </ul>
       <p>One of my hobbies is keeping a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
       <h2>Recent Blog Posts</h2>
-      <ul className="recentlist">{postsList(posts)}</ul>      
+      <ul className="indexlist">{postsList(posts)}</ul>      
       <Link to="/blog/" className="read-blog">Read my blog</Link>
       <div class="divider"></div>  
       <h4 id="note">Note</h4>  
