@@ -30,7 +30,7 @@ const postsList = posts =>
       <ul className="indexlist">
         <li><i class="em em-flag-ca" aria-label="Canada Flag"></i>.Net developer from Vancouver</li>
         <li><i class="em em-flag-mm" aria-label="Burma Flag"></i>Originally from Burma</li>
-        <li><i class="em em-flag-sg" aria-label="Singapore Flag"></i>Studied and worked in Singapore from 2005 to 2019</li>
+        <li><i class="em em-flag-sg" aria-label="Singapore Flag"></i>Studied and worked in Singapore</li>
         <li><i class="em em-computer" aria-label="Personal Computer"></i>Work with .Net primarily and a bit of the rest</li>
       </ul>
       <p>One of my hobbies is keeping a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
