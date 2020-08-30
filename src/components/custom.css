@@ -137,3 +137,15 @@ footer a {
     width: 130px;
     text-align: center;
   }
+
+figure {
+    margin-bottom: 15px;
+}
+
+figure > img {
+    margin: 0;   
+}
+
+figure > figcaption {
+    text-align: center;   
+}
