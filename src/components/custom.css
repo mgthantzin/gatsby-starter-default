@@ -149,3 +149,9 @@ figure > img {
 figure > figcaption {
     text-align: center;   
 }
+
+blockquote > cite {
+    color: #777;
+    font-style: normal;
+    font-size: small;
+}
