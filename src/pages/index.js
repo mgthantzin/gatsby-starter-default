@@ -8,14 +8,14 @@ import he from "he"
 import Helmet from "react-helmet"
 
 const IndexPage = ({ data }) => {
-  const posts = data.allWordpressPost.edges.filter(
-      p => p.node.date !== null
+  const posts = data.allMarkdownRemark.edges.filter(
+    p => p.node.frontmatter.date !== null
   )
 
 const postsList = posts =>
   posts.map(post => (
-    <li key={post.node.wordpress_id}>
-        <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link> <i className="date">{post.node.date}</i>     
+    <li key={post.node.id}>
+        <Link to={decodeURI(`/posts/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link> <i className="date">{post.node.frontmatter.date.substring(0, 6)}</i>     
     </li>
   ))
 
@@ -49,14 +49,19 @@ export default IndexPage
 
 export const query = graphql`
  {
-    allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}, limit: 5) {
-          edges {
-              node {
-                  date(formatString: "DD MMM")
-                  title
-                  slug
-              }
-          }
+  allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 5) {
+    edges {
+      node {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMM DD YYYY")
+          title
+        }
       }
+    }
   }
+}
 `

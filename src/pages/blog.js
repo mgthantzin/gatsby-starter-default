@@ -10,16 +10,16 @@ import he from "he"
 
 const BlogPage = ({ data }) => {
 
-  const posts = data.allWordpressPost.edges.filter(
-    p => p.node.date !== null
+  const posts = data.allMarkdownRemark.edges.filter(
+    p => p.node.frontmatter.date !== null
   )
 
   const postsList = posts =>
     posts.map(post => (
-      <li key={post.node.wordpress_id}>
-        <div>{post.node.date.substring(0, 6)}</div>
+      <li key={post.node.id}>
+        <div>{post.node.frontmatter.date.substring(0, 6)}</div>
         <div>
-          <Link to={decodeURI(`/posts/${post.node.slug}/`)}>{he.decode(post.node.title)}</Link>
+          <Link to={decodeURI(`/posts/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link>
         </div>
       </li>
     ))
@@ -49,16 +49,20 @@ return (
 export default BlogPage
 
 export const query = graphql`
-  query {
-    allWordpressPost {
-      edges {
-        node {
-            wordpress_id  
-            title
-            slug
-            date(formatString: "MMM DD YYYY")
-          }
+query {
+  allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    edges {
+      node {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMM DD YYYY")
+          title
         }
       }
     }
+  }
+}
 `
