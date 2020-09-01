@@ -1,6 +1,6 @@
 ---
 title: Password တွေကို ဘယ်လိုကိုင်တွယ်ကြမလဲ
-date: 2020-01-22T19:43:00-07:00
+date: 2020-01-22T18:43:00-07:00
 slug: how-to-handle-passwords
 category: Tech
 description: ကျွန်တော်တို့ ဒီနေ့ password တွေ အများကြီးကို မှတ်နေကြရပါပြီ။ ဒါကို လွယ်ကူအောင်
