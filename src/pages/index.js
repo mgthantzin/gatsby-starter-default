@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 const postsList = posts =>
   posts.map(post => (
     <li key={post.node.id}>
-        <Link to={decodeURI(`/posts/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link> <i className="date">{post.node.frontmatter.date.substring(0, 6)}</i>     
+        <Link to={decodeURI(`/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link> <i className="date">{post.node.frontmatter.date.substring(0, 6)}</i>     
     </li>
   ))
 

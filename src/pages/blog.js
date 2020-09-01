@@ -19,7 +19,7 @@ const BlogPage = ({ data }) => {
       <li key={post.node.id}>
         <div>{post.node.frontmatter.date.substring(0, 6)}</div>
         <div>
-          <Link to={decodeURI(`/posts/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link>
+          <Link to={decodeURI(`/${post.node.fields.slug}/`)}>{he.decode(post.node.frontmatter.title)}</Link>
         </div>
       </li>
     ))

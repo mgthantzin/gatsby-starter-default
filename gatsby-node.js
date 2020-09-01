@@ -64,14 +64,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({
         node,
         name: 'slug',
-        value: node.frontmatter.slug
+        value: 'posts/' + node.frontmatter.slug
       });
     } else {
       const value = createFilePath({ node, getNode });
       createNodeField({
         node,
         name: 'slug',
-        value
+        value: 'posts/' + value
       });
     }
   }
