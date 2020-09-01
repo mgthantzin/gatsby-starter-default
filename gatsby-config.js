@@ -101,26 +101,29 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allWordpressPost } }) => {
-              return allWordpressPost.edges.map(edge => {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node, {
-                  description: edge.node.content,
-                  date: edge.node.date,
-                  url: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
-                  custom_elements: [{ "content:encoded": edge.node.content }],
+                  description: edge.node.html,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + `/posts/` + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + `/posts/` + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
             query: `
               {
-                allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}) {
+                allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
                   edges {
                     node {
-                      date
-                      title
-                      content
-                      slug
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date(formatString: "MMM DD YYYY")
+                      }
                     }
                   }
                 }
