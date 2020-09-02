@@ -18,5 +18,6 @@ fields:
   name: description
   label: description
 pages:
+- src/posts/netflix.md
 - src/posts/supermoon.md
 - src/posts/မရှဲကြစို့.md
