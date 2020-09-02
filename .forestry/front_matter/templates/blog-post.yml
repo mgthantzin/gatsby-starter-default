@@ -18,4 +18,9 @@ fields:
   name: description
   label: description
 pages:
-- src/posts/password.md
+- src/posts/jamus-lim.md
+- src/posts/netflix.md
+- src/posts/no-vote.md
+- src/posts/supermoon.md
+- src/posts/ကြယ်စုများအား-စွန့်ခွာဖြတ်ကျော်စွန့်စားခြင်း.md
+- src/posts/မရှဲကြစို့.md
