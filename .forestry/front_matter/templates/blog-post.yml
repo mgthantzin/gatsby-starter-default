@@ -18,4 +18,5 @@ fields:
   name: description
   label: description
 pages:
+- src/posts/supermoon.md
 - src/posts/မရှဲကြစို့.md
