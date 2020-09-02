@@ -149,7 +149,7 @@ img + em {
     font-size: 90%;
 }
 
-blockquote > cite {
+blockquote cite {
     color: #777;
     font-style: normal;
     font-size: small;
