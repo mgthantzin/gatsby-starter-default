@@ -14,6 +14,12 @@ module.exports = {
     //    respectDNT: true,
     //  },
     //},
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,40 +43,47 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // baseUrl will need to be updated with your WordPress source
-        baseUrl: `tzo.tech.blog`,
-        protocol: `https`,
-        // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: true,
-        // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
-        auth: {
-          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-          wpcom_app_clientId: "68015",
-          wpcom_user: process.env.WORDPRESS_EMAIL,
-          wpcom_pass: process.env.WORDPRESS_PASSWORD,
-        },
-        excludedRoutes: [
-          "/*/*/comments", 
-          "/yoast/**", 
-          "/akismet/**", 
-          "/oembed/**", 
-          "**/categories",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies",
-          "**/settings",
-          "**/themes",
-          "**/users/me",
-          "**/feedback",
-          "**/users",
-          "**/jetpack-global-styles"
-        ],
-      }
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
     },
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     // baseUrl will need to be updated with your WordPress source
+    //     baseUrl: `tzo.tech.blog`,
+    //     protocol: `https`,
+    //     // is it hosted on wordpress.com, or self-hosted?
+    //     hostingWPCOM: true,
+    //     // does your site use the Advanced Custom Fields Plugin?
+    //     useACF: false,
+    //     auth: {
+    //       wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+    //       wpcom_app_clientId: "68015",
+    //       wpcom_user: process.env.WORDPRESS_EMAIL,
+    //       wpcom_pass: process.env.WORDPRESS_PASSWORD,
+    //     },
+    //     excludedRoutes: [
+    //       "/*/*/comments", 
+    //       "/yoast/**", 
+    //       "/akismet/**", 
+    //       "/oembed/**", 
+    //       "**/categories",
+    //       "**/pages",
+    //       "**/media",
+    //       "**/tags",
+    //       "**/taxonomies",
+    //       "**/settings",
+    //       "**/themes",
+    //       "**/users/me",
+    //       "**/feedback",
+    //       "**/users",
+    //       "**/jetpack-global-styles"
+    //     ],
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -88,26 +101,29 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allWordpressPost } }) => {
-              return allWordpressPost.edges.map(edge => {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node, {
-                  description: edge.node.content,
-                  date: edge.node.date,
-                  url: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + `/posts/` + edge.node.slug,
-                  custom_elements: [{ "content:encoded": edge.node.content }],
+                  description: edge.node.html,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + `/posts/` + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + `/posts/` + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
             query: `
               {
-                allWordpressPost(filter: {status: {eq: "publish"}}, sort: {order: DESC, fields: [date]}) {
+                allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
                   edges {
                     node {
-                      date
-                      title
-                      content
-                      slug
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date(formatString: "MMM DD YYYY")
+                      }
                     }
                   }
                 }

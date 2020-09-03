@@ -5,39 +5,74 @@
  */
 
 // You can delete this file if you're not using it
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require("path")
+const { createFilePath } = require("gatsby-source-filesystem")
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const postTemplate = path.resolve("./src/templates/postTemplate.js")
 
-  const result = await graphql(`
+  const template = path.resolve(`src/templates/post.js`)
+
+  return graphql(`
     {
-      allWordpressPost(filter: {status: {eq: "publish"}}) {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
         edges {
           node {
-            slug
-            wordpress_id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
           }
         }
       }
     }
-  `)
-
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-
-  const BlogPosts = result.data.allWordpressPost.edges
-  BlogPosts.forEach(post => {
-    createPage({
-      path: decodeURI(`/posts/${post.node.slug}`),
-      component: postTemplate,
-      context: {
-        id: post.node.wordpress_id,
-      },
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+    const posts = result.data.allMarkdownRemark.edges
+    posts.forEach(({ node }, index) => {
+      createPage({
+        path: node.fields.slug,
+        component: template,
+        context: {
+          slug: node.fields.slug,
+          prev: index === 0 ? null : posts[index - 1].node,
+          next: index === posts.length - 1 ? null : posts[index + 1].node,
+        },
+      })
     })
   })
+}
+
+// create the slugs programatically instead of specifying a path in the frontmatter
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // createNodeField({
+    //   node,
+    //   name: `slug`,
+    //   value: slug,
+    // })
+    if (typeof node.frontmatter.slug !== 'undefined') {
+      createNodeField({
+        node,
+        name: 'slug',
+        value: 'posts/' + node.frontmatter.slug
+      });
+    } else {
+      const value = createFilePath({ node, getNode });
+      createNodeField({
+        node,
+        name: 'slug',
+        value: 'posts/' + value
+      });
+    }
+  }
 }

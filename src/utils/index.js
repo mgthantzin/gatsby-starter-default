@@ -17,4 +17,4 @@ export const groupBy = (items, fn) =>
 // get the Year of a specified date
 
 export const getDateYear = ({ node }) =>
-  new Date(node.date).getFullYear()
+  new Date(node.frontmatter.date).getFullYear()

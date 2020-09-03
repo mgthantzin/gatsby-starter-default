@@ -1,0 +1,26 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: slug
+  label: slug
+- type: text
+  name: category
+  label: category
+- type: text
+  name: description
+  label: description
+pages:
+- src/posts/jamus-lim.md
+- src/posts/netflix.md
+- src/posts/no-vote.md
+- src/posts/supermoon.md
+- src/posts/ကြယ်စုများအား-စွန့်ခွာဖြတ်ကျော်စွန့်စားခြင်း.md
+- src/posts/မရှဲကြစို့.md
