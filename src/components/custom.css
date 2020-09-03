@@ -154,3 +154,8 @@ blockquote cite {
     font-style: normal;
     font-size: small;
 }
+
+div.footnotes > ol > li > p {
+    margin-bottom: 0;
+    display: inline;
+}

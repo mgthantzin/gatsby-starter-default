@@ -14,19 +14,19 @@ const post = ({ data }) => {
         title={frontmatter.title}
         description={html.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/<[^>]*>/g, '').substring(0,99)}
       />
-      <h4 class="heading">{he.decode(frontmatter.title)}</h4>
-      <span class="code aligncenter"><small>{frontmatter.date}</small></span>
-      <div class="divider"></div>  
+      <h4 className="heading">{he.decode(frontmatter.title)}</h4>
+      <span className="code aligncenter"><small>{frontmatter.date}</small></span>
+      <div className="divider"></div>  
       <article 
         style={{ marginTop: 20 }}
         dangerouslySetInnerHTML={{ __html: html }}
       />
-      <div class="divider"></div>
-      <h4 class="heading">
+      <div className="divider"></div>
+      <h4 className="heading">
       <Link to="/blog/" title="Back to Blog">
         &larr;{" "}Back
       </Link></h4>
-      <div class="divider"></div>
+      <div className="divider"></div>
     </Layout>
   )
 }
