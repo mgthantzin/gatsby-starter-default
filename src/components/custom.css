@@ -160,10 +160,14 @@ div.footnotes > ol > li > p {
     display: inline;
 }
 
-p.addendum {
+div.addendum {
     background: #CCC;
     margin: 1.5em 0;
     padding: .9em 12px;
     color: #555;
     border-radius: 5px;
+}
+
+div.addendum p:last-child {
+    margin-bottom: 0;
 }

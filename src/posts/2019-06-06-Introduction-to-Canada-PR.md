@@ -3,7 +3,7 @@ title: ကနေဒါ ပီအာ အကြောင်း
 date: 2019-06-06T14:18:23+08:00
 template: "post"  
 draft: false  
-slug: "introduction-to-canada-pr/"  
+slug: "introduction-to-canada-pr"  
 category: "Guide"  
 tags:
   - "Canada"
@@ -66,6 +66,8 @@ IELTS ကတော့ ဒီလောက်ရဖို့ *recommend* လုပ
 
 ကနေဒါက IELTS skills တွေရဲ့ band တွေကို စုပြီး Canada Language Band တစ်ခု ပြန် သတ်မှတ်လိုက်ပါတယ်။ (ရည်ညွှန်းရလွယ်အောင်လား မပြောတတ်ပါဘူး။) အပေါ်က ပြောတဲ့ L8,S7,R7,W7 ကို သူတို့က Canada Language Band 9 (or) CLB 9 လို့ သတ်မှတ်ပါတယ်။ CLB 9 က *recommended* အမှတ်ပါ။ CLB တွက်ပုံကို [ဒီမှာ](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/standard-requirements/language-requirements/test-equivalency-charts.html) လေ့လာနိုင်ပါတယ်။ အောက်မှာလည်း အလွယ်တကူ ကြည့်နိုင်အောင် ပုံပြထားပါတယ်။
 
+![IELTS and CLB](https://cdn.thantzinoo.net/images/CanadaPR_IELTS.jpg)
+
 အဲ့ထက်ပိုရရင် ရ‌သ‌လောက်ကို အမှတ်ပေးလို့ အစွမ်းကုန်ဖြေဖို့ တိုက်တွန်းချင်ပါတယ်။ ဖြစ်နိုင်ရင် အောက်မှာ ရေးထားတဲ့ အမှတ်တွေလောက်ရအောင် ကြိုးစားစေချင်ပါတယ်။ *Best case* CLB10 ပါ။ *Recommended* CLB9 ထက် CRS Score ၁၂ မှတ် ပိုရပါမယ်။ ယေဘူယျ ခက်တယ်လို့ သတ်မှတ်ကြတဲ့ Writing ကို 7.5 ရဖို့ကလွဲလို့ ကျန်တဲ့ အမှတ်တွေက ကောင်းကောင်းကြီး ဖြစ်နိုင်ပါတယ်။ (တချို့အတွက် Writing 7.5 ကလည်း သိပ်ကြီး မခက်ဘူးဆိုတာ ဖြစ်နိုင်ပါတယ်။)
 
 > Speaking = 7.5  
@@ -102,7 +104,9 @@ CLB9 or CLB10 ရထားမှ Education နဲ့ Work Experience အတွ�
 အားလုံးပေါင်းပြီးလို့ ကိုယ့်ရမှတ်က cut-off score နဲ့ မီသွားတဲ့အခါ Invitation to Apply (ITA) ရပါလိမ့်မယ်။ Cut-off score က ခုနောက်ဆုံး မေလ draw မှာတော့ ၄၇၀ နဲ့ နည်းနည်း မြင့်နေပါတယ်။ ဒါပေမယ့် အဲ့ဒီဖြတ်တဲ့အမှတ်က တချိန်လုံး အတက်အကျ ဖြစ်နေတာပါ။ မရသေးရင် စိတ်ရှည်ရှည်နဲ့ စောင့်ပါ။ ကြားထဲမှာ အမှတ်တိုးနိုင်မယ့်ကိစ္စဆတွ ကြိုးစားနေရမှာ ဖြစ်ပါတယ်။ (အများဆုံး‌လုပ်နိုင်တာကတော့ IELTS ကို ထပ်ပြီး အမှတ်များအောင် ကြိုးစားတာပါ။ IELTS နဲ့ ပတ်သက်ပြီး မအိဝေရဲ့ အကြုံပြုချက်ကို အောက်မှာ ဖတ်နိုင်ပါတယ်။)
 
 #### Application Fee
-Application fee က လူကြီး တစ်ယောက်အတွက် ကနေဒါဒေါ်လာ ၅၅၀ ပါ။ နောက်ပြီး Right of Permanent Residence Fee (RPRF) ဆိုတာက PR ကျလာရင် ပေးရတာပါ။ အဲ့တာက တစ်ယောက်ကို ကနေဒါဒေါ်လာ ၄၉၀ ပါ။ အစတည်းက တခါထဲ ကြိုပေးထားလည်း ရပါတယ်။ ကလေးတစ်ယောက်အတွက် ကနေဒါဒေါ်လာ ၁၅၀ ပေးရပါတယ်။ အသေးစိတ်ကို [ဒီမှာ](http://www.cic.gc.ca/english/information/fees/fees.asp) ကြည့်ပါ။ 
+Application fee က လူကြီး တစ်ယောက်အတွက် ကနေဒါဒေါ်လာ ၅၅၀ ပါ။ နောက်ပြီး Right of Permanent Residence Fee (RPRF) ဆိုတာက PR ကျလာရင် ပေးရတာပါ။ အဲ့တာက တစ်ယောက်ကို ကနေဒါဒေါ်လာ ၄၉၀ ပါ။ အစတည်းက တခါထဲ ကြိုပေးထားလည်း ရပါတယ်။ ကလေးတစ်ယောက်အတွက် ကနေဒါဒေါ်လာ ၁၅၀ ပေးရပါတယ်။ အသေးစိတ်ကို [ဒီမှာ](http://www.cic.gc.ca/english/information/fees/fees.asp) ကြည့်ပါ။
+
+![Application Fee](https://cdn.thantzinoo.net/images/CanadaPR_Fees.jpg)
 
 ### ၃။ Application 
 ITA ရပြီးရင်တော့ application တင်လို့ရပါပြီ။ တင်ဖို့ ရက် ၆၀ အချိန်‌ပေးပါတယ်။ တင်ရမယ့် စာရွက်စာတမ်းတွေက
@@ -118,6 +122,8 @@ Proof of Funds အတွက်က
 သုံးယောက်ဆိုရင် ၁၉၄၀၀ ဝန်းကျင် စသဖြင့် ပြဖို့ လိုအပ်ပါလိမ့်မယ်။
 
 Proof of Funds အချက်အလက် အသေးစိတ်ကို [ဒီမှာ](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html) ကြည့်နိုင်ပါတယ်။ ပုံလေး အောက်မှာ ပြထားပါတယ်။
+
+![Proof of Funds](https://cdn.thantzinoo.net/images/CanadaPR_FamilySupport.jpg)
 
 အဲ့စာရွက်စာတမ်းတွေ ပြည့်ပြည့်စုံစုံ မှန်မှန်ကန်ကန်နဲ့ application form တင်ပြီး processing time သတ်မှတ်ချိန် ၆လဝန်းကျင် စောင့်ပြီးရင်တော့ သင့်ရဲ့ passport မှာ visa ကပ်ပေးဖို့ Passport Request (PPR) email ဝင်ရောက်လာမှာ ဖြစ်ပါတယ်။ Passport Request ရလာရင် သတ်မှတ်ထားတဲ့ ဝန်ဆောင်မှုဌာနကနေ passport ရယ်၊ ဓာတ်ပုံရယ်တို့ကို ပို့ပေးရမှာ ဖြစ်ပါတယ်။ အချိန် သုံးပတ်ကနေ တစ်လစောင့်ပြီးရင် visa ကပ်ပြီးသား passport နဲ့အတူ confirmation of permanent residence (COPR) letter ပါ အတူရရှိပါလိမ့်မည်။ ကနေဒါကို ​​​သွား​ရောက် land လုပ်ပြီး PR ကို activate လုပ်ပြီးရင်တော့ PR process ပြီးဆုံးပြီ ဖြစ်ပါတယ်။
 
@@ -161,3 +167,5 @@ Writing Essay / Letter က ရေးပြီးတိုင်း ဆရာ တ
 IELTS အမှတ်မကောင်းခဲ့ရင်လဲ အားမငယ်ပါနဲ့။ ရတဲ့အမှတ်နဲ့ EOI profile အရင် လုပ်ထားပြီး IELTS ပြန်ပြန်ဖြေပြီး ထပ်တင်နေလို့ ရပါတယ်။ အဓိက က pool ထဲ ရောက်ဖို့ပါ။ အမှတ်ချင်းတူတောင် pool ထဲ အရင်ရောက်နေနှင့်တဲ့လူကို ဦးစားပေးမှာပါ။
 
 အားလုံးပဲ IELTS တစ်ခါတည်းဖြေရုံနဲ့ လိုချင်တဲ့ band အမှတ် ရပြီး ကိုယ့်သွားချင်တဲ့ ပန်းတိုင် ခရီးကို လျှောက်လှမ်းနိုင်ကြပါစေလို့ ဆုတောင်းပေးပါတယ်နော်။ 
+
+![CRS Graph](https://cdn.thantzinoo.net/images/CanadaPR_CRSGraph.jpg)
