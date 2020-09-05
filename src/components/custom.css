@@ -167,3 +167,7 @@ div.addendum {
     color: #555;
     border-radius: 5px;
 }
+
+div.addendum p:last-child {
+    margin-bottom: 0;
+}
