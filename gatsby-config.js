@@ -17,7 +17,9 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        
+        plugins: [
+          'gatsby-remark-numbered-footnotes',
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,

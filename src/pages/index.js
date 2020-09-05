@@ -28,16 +28,16 @@ const postsList = posts =>
     <div style={{ marginBottom: 50 }}>
       <h1>Hello, I'm <span style={{ color: '#005D8F' }}>Thant</span>!</h1>
       <ul className="indexlist">
-        <li><i class="em em-flag-ca" aria-label="Canada Flag"></i>.Net developer from Vancouver</li>
-        <li><i class="em em-flag-mm" aria-label="Burma Flag"></i>Originally from Burma</li>
-        <li><i class="em em-flag-sg" aria-label="Singapore Flag"></i>Studied and worked in Singapore</li>
-        <li><i class="em em-computer" aria-label="Personal Computer"></i>Primarily .Net and a bit of the rest</li>
+        <li><i className="em em-flag-ca" aria-label="Canada Flag"></i>.Net developer from Vancouver</li>
+        <li><i className="em em-flag-mm" aria-label="Burma Flag"></i>Originally from Burma</li>
+        <li><i className="em em-flag-sg" aria-label="Singapore Flag"></i>Studied and worked in Singapore</li>
+        <li><i className="em em-computer" aria-label="Personal Computer"></i>Primarily .Net and a bit of the rest</li>
       </ul>
       <p>One of my hobbies is keeping a blog and I write mostly in Burmese. Sometimes, I also share articles that I find interesting.</p>
       <h2>Recent Blog Posts</h2>
       <ul className="indexlist">{postsList(posts)}</ul>      
       <Link to="/blog/" className="read-blog">Read my blog</Link>
-      <div class="divider"></div>  
+      <div className="divider"></div>  
       <h4 id="note">Note</h4>  
       <p>This website has tracking enabled for minimal analytics. Please refer to <Link to="/privacy/">Privacy Policy</Link>.</p>
     </div>

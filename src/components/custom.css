@@ -154,3 +154,16 @@ blockquote cite {
     font-style: normal;
     font-size: small;
 }
+
+div.footnotes > ol > li > p {
+    margin-bottom: 0;
+    display: inline;
+}
+
+p.addendum {
+    background: #CCC;
+    margin: 1.5em 0;
+    padding: .9em 12px;
+    color: #555;
+    border-radius: 5px;
+}
