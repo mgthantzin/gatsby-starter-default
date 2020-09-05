@@ -160,7 +160,7 @@ div.footnotes > ol > li > p {
     display: inline;
 }
 
-p.addendum {
+div.addendum {
     background: #CCC;
     margin: 1.5em 0;
     padding: .9em 12px;
