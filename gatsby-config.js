@@ -14,6 +14,7 @@ module.exports = {
     //    respectDNT: true,
     //  },
     //},
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
